@@ -41,3 +41,12 @@ a {
   max-width: var(--container-width);
 }
 
+.flex {
+  display: flex;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

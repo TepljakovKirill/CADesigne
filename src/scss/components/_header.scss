@@ -1,0 +1,64 @@
+.header {
+  border-bottom: 1px solid var(--gray-color);
+
+  .header-container {
+    height: 97.5px;
+    padding-left: 31px;
+    padding-right: 27px;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      padding: 20px 10px;
+      border-bottom: 2px solid transparent;
+      transition: 0.3s ease-in-out;
+    }
+
+    .logo:hover {
+      border-bottom: 2px solid var(--orange-color);
+      transition: 0.3s ease-in-out;
+    }
+
+    img {
+      margin-top: 20px;
+    }
+
+    .nav__item:not(:last-child) {
+      margin-right: 44px;
+    }
+
+    .nav__item:last-child {
+      position: relative;
+    }
+
+    .nav__link {
+      padding: 40px 10px;
+      border-bottom: 2px solid transparent;
+      color: var(--black-color);
+      transition: 0.3s ease-in-out;
+    }
+
+    .nav__link--social {
+      padding-right: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #187CD3;
+    }
+
+    .nav__link:hover {
+      border-bottom: 2px solid var(--orange-color);
+      transition: 0.3s ease-in-out;
+    }
+
+    .nav__link--social::before {
+      content: "";
+      background-image: url(../../img/arrow-social.png);
+      display: block;
+      width: 5px;
+      height: 4px;
+      position: absolute;
+      top: 8px;
+      right: 10px;
+    }
+  }
+}
