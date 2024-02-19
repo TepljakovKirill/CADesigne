@@ -1,0 +1,43 @@
+.bunner {
+  margin-top: 36px;
+
+  .banner__content {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1680px;
+    height: auto;
+
+    .banner__block {
+      position: absolute;
+      top: 121px;
+      left: 260px;
+
+      &--title {
+        color: var(--white-color);
+      }
+
+      .banner__block--button {
+        margin-top: 59px;
+        width: 254px;
+        height: 64px;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        border: none;
+        color: var(--white-color);
+        background-color: var(--orange-color);
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+      }
+
+      .banner__block--button:hover {
+        background-color: var(--orange-hover-color);
+        transition: 0.3s ease-in-out;
+      }
+    }
+
+  }
+
+}
+
+

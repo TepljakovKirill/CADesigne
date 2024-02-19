@@ -1,7 +1,7 @@
 :root {
   // base
   --font-family: "Open Sans", sans-serif;
-  --content-width: 1242px;
+  --content-width: 1192px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
@@ -10,4 +10,5 @@
   --black-color: #242627;
   --gray-color: #F2F2F2;
   --orange-color: #E9862A;
+  --orange-hover-color: #E77E1E;
 }

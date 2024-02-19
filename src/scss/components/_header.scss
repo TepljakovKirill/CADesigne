@@ -3,8 +3,6 @@
 
   .header-container {
     height: 97.5px;
-    padding-left: 31px;
-    padding-right: 27px;
     justify-content: space-between;
     align-items: center;
 
@@ -32,7 +30,7 @@
     }
 
     .nav__link {
-      padding: 40px 10px;
+      padding: 39px 10px;
       border-bottom: 2px solid transparent;
       color: var(--black-color);
       transition: 0.3s ease-in-out;
