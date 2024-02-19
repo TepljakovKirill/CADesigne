@@ -8,7 +8,8 @@ html {
   box-sizing: inherit;
 }
 
-h1 {
+h1,
+p {
   padding: 0;
   margin: 0;
 }
@@ -48,6 +49,10 @@ a {
 
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
 }
 
 .list-reset {
