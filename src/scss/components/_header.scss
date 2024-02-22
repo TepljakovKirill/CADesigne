@@ -60,14 +60,36 @@
     }
 
     .burger {
-      background-image: url(../../img/burger.png);
+      position: relative;
       width: 28px;
       height: 18px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
       cursor: pointer;
+
       display: none;
+    }
+
+    .burger span, .burger:after, .burger:before{
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      background: var(--blue-color);
+      margin: 0 auto;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    .burger span{
+        top: 21px;
+    }
+
+    .burger:after, .burger:before{
+        content: '';
+    }
+
+    .burger:after{
+        bottom: 3px;
+    }
+
+    .burger:before{
+        top: 5px;
     }
 
     @include tablet {
