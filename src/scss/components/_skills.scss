@@ -1,3 +1,6 @@
+@import '../../../node_modules/swiper/swiper.scss';
+@import '../../../node_modules/swiper/modules/pagination/pagination.scss';
+
 .skills__container {
   margin-top: 72px;
   width: 100%;
@@ -7,7 +10,6 @@
   border: 0.5px solid var(--gray-color);
 
   .skills__block {
-    width: 398px;
     height: 377px;
     justify-content: center;
     flex-direction: column;
@@ -47,5 +49,86 @@
 
   .skills__block:hover>.skills__descr {
     display: block;
+  }
+
+
+}
+
+@include tablet {
+  .skills__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+ }
+}
+
+
+
+// стили для слайдера
+.swiper-skills {
+  margin-top: 62px;
+  display: none;
+
+  .swiper-slide {
+    width: 100%;
+
+    .swiper-slide-container {
+      width: 100%;
+      border: 0.5px solid var(--gray-color);
+
+      .skills__block {
+        width: 50%;
+        height: 345px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 0.5px solid var(--gray-color);
+      }
+
+      .skills__svg {
+        fill: #4F4F4F;
+        transition: 0.3s ease-in-out;
+      }
+
+      .skills__title {
+        margin-top: 44px;
+        font-size: 20px;
+      }
+
+      .skills__descr {
+        max-width: 297px;
+        margin-top: 23px;
+        text-align: center;
+        line-height: 26px;
+        transition: 0.2s ease-in-out;
+        display: none;
+      }
+    }
+
+  }
+
+  // настройки кнопок слайдера
+  .swiper-pagination-bullet-active {
+    background-color: var(--orange-color);
+  }
+
+  .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 37px);
+  }
+
+}
+
+@include small-tablet {
+  .skills__container {
+    display: none;
+ }
+
+ .swiper-skills {
+  display: block;
+ }
+}
+
+@include small-mobile {
+  .skills {
+    display: none;
   }
 }

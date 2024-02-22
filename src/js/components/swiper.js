@@ -1,7 +1,6 @@
+import SwiperCore, { Navigation } from "swiper/core";
 
-import SwiperCore, { Navigation } from 'swiper/core';
-
-const swiper = new SwiperCore('.swiper', {
+const swiper = new SwiperCore(".swiper", {
   modules: [Navigation],
   autoplay: {
     delay: 2500,
@@ -9,11 +8,7 @@ const swiper = new SwiperCore('.swiper', {
   },
   loop: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
-
-
-
-
