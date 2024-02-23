@@ -12,11 +12,6 @@
       transition: 0.3s ease-in-out;
     }
 
-    .logo:hover {
-      border-bottom: 2px solid var(--orange-color);
-      transition: 0.3s ease-in-out;
-    }
-
     img {
       margin-top: 20px;
     }
@@ -140,7 +135,7 @@
         z-index: 100;
         box-shadow: 5px 0 15px -5px rgba(0, 0, 0, 0.5);
         background-color: var(--blue-color);
-        transform: translateX(-150vh);
+        transform: translateX(-200vh);
         transition: all 0.3s;
       }
 
