@@ -38,6 +38,10 @@
 
       @include small-tablet {
 
+        .bunner {
+          margin-top: 0;
+        }
+
         .banner__block--button {
           margin-top: 35px;
           width: 234px;
@@ -95,6 +99,15 @@
 
     }
 
+
+
+  }
+
+  @include small-tablet {
+
+    .bunner {
+      margin-top: 0;
+    }
   }
 
 

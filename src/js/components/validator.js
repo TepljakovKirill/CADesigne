@@ -1,62 +1,84 @@
-const form = document.querySelector('.response__form');
+const form = document.querySelector(".response__form");
+const message = document.querySelector(".response__message");
 
-form.addEventListener('submit', function (event) {
+form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   // Проверка полей формы
-  const textInput = form.querySelector('#text');
-  const nameInput = form.querySelector('#name');
-  const telInput = form.querySelector('#tel');
-  const emailInput = form.querySelector('#email');
-  const educationInput = form.querySelector('#education');
-  const addressInput = form.querySelector('#address');
+  const textInput = form.querySelector("#text");
+  const nameInput = form.querySelector("#name");
+  const telInput = form.querySelector("#tel");
+  const emailInput = form.querySelector("#email");
+  const educationInput = form.querySelector("#education");
+  const addressInput = form.querySelector("#address");
 
   let isValid = true;
 
-  if (textInput.value.trim() === '') {
-    displayErrorMessage(textInput, 'Поле "Желаемая вакансия" не должно быть пустым');
+  if (textInput.value.trim() === "") {
+    displayErrorMessage(
+      textInput,
+      'Поле "Желаемая вакансия" не должно быть пустым'
+    );
     isValid = false;
   }
 
-  if (nameInput.value.trim() === '') {
-    displayErrorMessage(nameInput, 'Поле "Фамилия, имя, отчество" не должно быть пустым');
+  if (nameInput.value.trim() === "") {
+    displayErrorMessage(
+      nameInput,
+      'Поле "Фамилия, имя, отчество" не должно быть пустым'
+    );
     isValid = false;
   }
 
-  if (telInput.value.trim() === '') {
-    displayErrorMessage(telInput, 'Поле "Мобильный телефон" не должно быть пустым');
+  if (telInput.value.trim() === "") {
+    displayErrorMessage(
+      telInput,
+      'Поле "Мобильный телефон" не должно быть пустым'
+    );
     isValid = false;
   } else if (!isValidPhoneNumber(telInput.value)) {
-    displayErrorMessage(telInput, 'Поле "Мобильный телефон" должно быть валидным номером');
+    displayErrorMessage(
+      telInput,
+      'Поле "Мобильный телефон" должно быть валидным номером'
+    );
     isValid = false;
   }
 
-  if (emailInput.value.trim() === '') {
+  if (emailInput.value.trim() === "") {
     isValid = true;
   } else if (!isValidEmail(emailInput.value)) {
-    displayErrorMessage(emailInput, 'Поле "E-mail" должно быть валидным адресом электронной почты');
+    displayErrorMessage(
+      emailInput,
+      'Поле "E-mail" должно быть валидным адресом электронной почты'
+    );
     isValid = false;
   }
 
-  if (educationInput.value.trim() === '') {
-    displayErrorMessage(educationInput, 'Поле "Образование" не должно быть пустым');
+  if (educationInput.value.trim() === "") {
+    displayErrorMessage(
+      educationInput,
+      'Поле "Образование" не должно быть пустым'
+    );
     isValid = false;
   }
 
-  if (addressInput.value.trim() === '') {
-    displayErrorMessage(addressInput, 'Поле "Адрес места жительства" не должно быть пустым');
+  if (addressInput.value.trim() === "") {
+    displayErrorMessage(
+      addressInput,
+      'Поле "Адрес места жительства" не должно быть пустым'
+    );
     isValid = false;
   }
 
   if (isValid) {
-    alert('Форма заполнена верно');
+    message.style.display = "block";
     // form.submit();
   }
 });
 
 function displayErrorMessage(inputElement, errorMessage) {
-  const errorElement = document.createElement('div');
-  errorElement.classList.add('error-message');
+  const errorElement = document.createElement("div");
+  errorElement.classList.add("error-message");
   errorElement.textContent = errorMessage;
   inputElement.parentNode.appendChild(errorElement);
 }

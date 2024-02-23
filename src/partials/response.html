@@ -1,59 +1,131 @@
 <section class="response">
-  <div class="response__wrap">
-    <h1 class="response__title">Отклик на вакансию</h1>
-    <form class="response__form" action="#">
-
-      <div class="text-field text-field_floating">
-        <input class="text-field__input" type="text" id="text" placeholder="Желаемая вакансия *" required>
-        <label class="text-field__label" for="text">Желаемая вакансия *</label>
-      </div>
-
-      <div class="text-field text-field_floating">
-        <input class="text-field__input" type="text" id="name" placeholder="Фамилия, имя, отчество *" required>
-        <label class="text-field__label" for="name">Фамилия, имя, отчество *</label>
-      </div>
-
-      <div class="contact flex">
+  <div class="response__container">
+    <div class="response__wrap">
+      <h1 class="response__title">Отклик на вакансию</h1>
+      <form class="response__form" action="#">
         <div class="text-field text-field_floating">
-          <input class="text-field__input width-style" type="tel" id="tel" placeholder="Моббильный телефон *" required>
-          <label class="text-field__label" for="tel">Моббильный телефон *</label>
+          <input
+            class="text-field__input"
+            type="text"
+            id="text"
+            placeholder="Желаемая вакансия *"
+            required
+          />
+          <label class="text-field__label" for="text"
+            >Желаемая вакансия *</label
+          >
         </div>
 
         <div class="text-field text-field_floating">
-          <input class="text-field__input width-style" type="email" id="email" placeholder="E-mail">
-          <label class="text-field__label" for="email">E-mail</label>
+          <input
+            class="text-field__input"
+            type="text"
+            id="name"
+            placeholder="Фамилия, имя, отчество *"
+            required
+          />
+          <label class="text-field__label" for="name"
+            >Фамилия, имя, отчество *</label
+          >
         </div>
-      </div>
 
-      <div class="text-field text-field_floating">
-        <input class="text-field__input" type="text" id="education" placeholder="Оразование *" required>
-        <label class="text-field__label" for="education">Оразование *</label>
-      </div>
+        <div class="contact flex">
+          <div class="text-field text-field_floating">
+            <input
+              class="text-field__input width-style"
+              type="tel"
+              id="tel"
+              placeholder="Моббильный телефон *"
+              required
+            />
+            <label class="text-field__label" for="tel"
+              >Моббильный телефон *</label
+            >
+          </div>
 
-      <div class="text-field text-field_floating">
-        <input class="text-field__input" type="text" id="address" placeholder="Адрес места жительства *" required>
-        <label class="text-field__label" for="address">Адрес места жительства *</label>
-      </div>
-
-      <div class="text-field text-field_floating flex">
-        <input class="text-field__input input-data" type="date" id="happy-day" name="start"
-          placeholder="Дата рождения" />
-        <label class="text-field__label" for="happy-day">Дата рождения</label>
-        <div class="input__wrapper">
-          <input type="file" id="input__file" class="input__file" name="f">
-          <label class="input-label" for="input__file">Загрузить резюме</label>
+          <div class="text-field text-field_floating">
+            <input
+              class="text-field__input width-style"
+              type="email"
+              id="email"
+              placeholder="E-mail"
+            />
+            <label class="text-field__label" for="email">E-mail</label>
+          </div>
         </div>
-      </div>
 
-      <textarea class="form__textarea" rows="6" cols="25" name="text" placeholder="Комментарий"></textarea>
-      <div class="form__send flex">
-        <div class="checkbox-wrap flex">
-          <input class="input-checkbox" type="checkbox" id="input-checkbox" checked>
-          <label for="input-checkbox">Я принимаю условия <span class="labbel-warning">передачи
-              информации</span></label>
+        <div class="text-field text-field_floating">
+          <input
+            class="text-field__input"
+            type="text"
+            id="education"
+            placeholder="Оразование *"
+            required
+          />
+          <label class="text-field__label" for="education">Оразование *</label>
         </div>
-        <input class="submit" type="submit" value="Отправить" />
-      </div>
-    </form>
+
+        <div class="text-field text-field_floating">
+          <input
+            class="text-field__input"
+            type="text"
+            id="address"
+            placeholder="Адрес места жительства *"
+            required
+          />
+          <label class="text-field__label" for="address"
+            >Адрес места жительства *</label
+          >
+        </div>
+
+        <div class="text-field text-field_floating flex">
+          <input
+            class="text-field__input input-data"
+            type="date"
+            id="happy-day"
+            name="start"
+            placeholder="Дата рождения"
+          />
+          <label class="text-field__label" for="happy-day">Дата рождения</label>
+          <div class="input__wrapper">
+            <input type="file" id="input__file" class="input__file" name="f" />
+            <label class="input-label" for="input__file"
+              >Загрузить резюме</label
+            >
+          </div>
+        </div>
+
+        <textarea
+          class="form__textarea"
+          rows="6"
+          cols="25"
+          name="text"
+          placeholder="Комментарий"
+        ></textarea>
+        <div class="form__send flex">
+          <div class="checkbox-wrap flex">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              id="input-checkbox"
+              checked
+            />
+            <label for="input-checkbox"
+              >Я принимаю условия
+              <span class="labbel-warning">передачи информации</span></label
+            >
+          </div>
+          <input class="submit" type="submit" value="Отправить" />
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="response__message flex">
+    <h2 class="response__message-title">Сообщение успешно отправлено</h2>
+    <p class="response__message-descr">
+      Наш менеджер свяжется с вами в ближайшее время
+    </p>
+    <button class="response__message-button"></button>
   </div>
 </section>
