@@ -56,11 +56,12 @@
           .small-tablet--img {
             display: none;
           }
-           // стили для слайдера на резрешении 768px
+
+          // стили для слайдера на резрешении 768px
           @include small-tablet {
 
             .swiper-slide--img {
-             display: none;
+              display: none;
             }
 
             .small-tablet--img {
@@ -147,16 +148,9 @@
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
   content: url(../../img/arrow-left.png);
-  margin-bottom: 20px;
 }
 
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
   content: url(../../img/arrow-next.png);
-  margin-bottom: 20px;
 }
-
-
-
-
-

@@ -58,13 +58,14 @@
   .skills__container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
- }
+  }
 }
 
 
 
 // стили для слайдера
 .swiper-skills {
+  position: relative;
   margin-top: 62px;
   display: none;
 
@@ -111,8 +112,14 @@
     background-color: var(--orange-color);
   }
 
-  .swiper-pagination-bullet {
-    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 37px);
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -13%;
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 27px);
   }
 
 }
@@ -120,11 +127,11 @@
 @include small-tablet {
   .skills__container {
     display: none;
- }
+  }
 
- .swiper-skills {
-  display: block;
- }
+  .swiper-skills {
+    display: block;
+  }
 }
 
 @include small-mobile {
